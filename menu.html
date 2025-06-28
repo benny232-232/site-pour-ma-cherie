@@ -1,44 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
+<title>Menu Aléatoire & Mots Doux</title>
 <head>
-  <meta charset="UTF-8">
-  <title>Menu d'Amour ❤️</title>
-  <link rel="stylesheet" href="/style.css">
-  <script>
-    function generateMotDoux() {
-      fetch('/mot-doux')
-        .then(response => response.text())
-        .then(text => {
-          document.getElementById('mot-doux').textContent = text;
-        });
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Aléatoire & Mots Doux</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="menu-container">
-    <h1>Menu Romantique 🌹</h1>
+    <div class="menu-container">
+        <h1>Pour Toi, Mon Amour😘🥰</h1>
 
-    <h2>Entrée</h2>
-  <p id="ENTREE">Clique ci-dessous pour révéler une Entrée</p>
-  <button class="btn" onclick="generateENTREE()">Génère une Entrée</button>
+        <h2>Le Menu du Jour</h2>
+        <p id="entree">Cliquez sur le bouton pour découvrir votre entrée...</p>
+        <p id="plat">... votre plat ...</p>
+        <p id="dessert">... et votre dessert.</p>
+        <button class="btn" onclick="genererMenu()">Générer un nouveau menu</button>
 
-  <h2>Plat</h2>
-  <p id="plat">Clique ci-dessous pour révéler un plat</p>
-  <button class="btn" onclick="generatePlat()">Génère un plat</button>
+        <h2>Un Mot Doux pour Toi😘</h2>
+        <p id="mot-doux">Cliquez sur le bouton pour un mot doux...</p>
+        <button class="btn" onclick="genererMotDoux()">Recevoir un mot doux</button>
+    </div>
 
-  <h2>Dessert</h2>
-  <p id="Dessert">Clique ci-dessous pour révéler un Dessert</p>
-  <button class="btn" onclick="generateDessert()">Génère un Dessert </button>
-
-  <h2>Boisson</h2>
-  <p id="Boisson">Clique ci-dessous pour révéler une Boisson</p>
-  <button class="btn" onclick="generateBoisson()">Génère une Boisson </button>
-
-  
-
-    <h2>Mot Doux 💌</h2>
-    <p id="mot-doux">Clique ci-dessous pour révéler un mot doux...</p>
-    <button class="btn" onclick="generateMotDoux()">Génère un mot doux ❤️</button>
-  </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
