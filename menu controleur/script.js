@@ -35,17 +35,16 @@ function generateENTREE() {
 function generatePlat() {
   const plats = [
     "Filet de boeuf au curry",
-    "Filet de boeuf au curry",
-    "Filet de boeuf au curry",
-    "Filet de boeuf au curry",
-    "Filet de boeuf au curry",
-    "Filet de boeuf au curry",
-    "Filet de boeuf au curry",
-    "Filet de boeuf au curry",
-    "Filet de boeuf au curry",
-    "Filet de boeuf au curry",
-    "Filet de boeuf au curry",
-    "
+    "Filet de bœuf, sauce au poivre et gratin dauphinois",
+    "Risotto aux champignons et parmesan",
+    "Magret de canard, sauce au miel et purée de patates douces",
+    "Pavé de saumon à l'unilatérale et sa fondue de poireaux",
+    "Lasagnes à la bolognaise maison",
+    "pate carbo",
+    "pate bolo"
+    ];
+  const randomIndex = Math.floor(Math.random() * plats.length);
+  document.getElementById('plat').innerText = plats[randomIndex];
 }
 
 
