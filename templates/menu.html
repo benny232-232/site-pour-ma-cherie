@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu d'Amour ❤️</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function generateMotDoux() {
+      fetch('/mot-doux')
+        .then(response => response.text())
+        .then(text => {
+          document.getElementById('mot-doux').textContent = text;
+        });
+    }
+  </script>
+</head>
+<body>
+  <div class="menu-container">
+    <h1>Menu Romantique 🌹</h1>
+
+    <h2>Entrée</h2>
+    <p th:text="${entree}">Entrée</p>
+
+    <h2>Plat</h2>
+    <p th:text="${plat}">Plat</p>
+
+    <h2>Dessert</h2>
+    <p th:text="${dessert}">Dessert</p>
+
+    <h2>Boisson</h2>
+    <p th:text="${boisson}">Boisson</p>
+
+    <hr>
+
+    <h2>Mot Doux 💌</h2>
+    <p id="mot-doux">Clique ci-dessous pour révéler un mot doux...</p>
+    <button class="btn" onclick="generateMotDoux()">Génère un mot doux ❤️</button>
+  </div>
+</body>
+</html>
